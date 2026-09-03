@@ -50,13 +50,15 @@ For t = 300 minutes, the position p = 10223.078642554414 kilometers
 
 print("Part 2:")
 
+# radius of ISS orbit
 radius = 6745
 
-# circumference of circle = 2 * pi * radius
+# circumference of ISS orbit
 circumference = 2 * pi * radius
 
+# time t = 300 minutes
 t = 300
+# Use linear interpolation estimate position p at t = 300 minutes
+p = (slope * (t - t1) + p1) % circumference
 
-p = slope * (t - t1) + pi
-
-print(p)
+print("For t =", t, "minutes, the position p =", p, "kilometers")
