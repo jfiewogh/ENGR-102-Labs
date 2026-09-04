@@ -19,13 +19,13 @@ newtons = conversion_number * pounds_to_newtons
 print(f"{conversion_number:.2f} pounds force is equivalent to {newtons:.2f} newtons")
 
 # Convert input from meters to feet
-meters_to_feet = 3.28
+meters_to_feet = 3.280839895
 feet = conversion_number * meters_to_feet
 print(f"{conversion_number:.2f} meters is equivalent to {feet:.2f} feet")
 
 # Convert input from atmospheres to kilopascals
-atmospheres_to_kilopascals =101.33
-kilopascals = conversion_number * atmospheres_to_kilopascals
+atms_to_kilopascals = 101.325
+kilopascals = conversion_number * atms_to_kilopascals
 print(f"{conversion_number:.2f} atmospheres is equivalent to {kilopascals:.2f} kilopascals")
 
 # Convert input from watts to BTU per hour
@@ -39,6 +39,5 @@ gallons = conversion_number * liters_per_sec_to_gallons_per_min
 print(f"{conversion_number:.2f} liters per second is equivalent to {gallons:.2f} US gallons per minute")
                                                                    
 # Convert input from Celsius to Fahrenheit
-celsius_to_fahrenheit = 33.8
-fahrenheit = conversion_number * celsius_to_fahrenheit
+fahrenheit = conversion_number * 9 / 5 + 32
 print(f"{conversion_number:.2f} degrees Celsius is equivalent to {fahrenheit:.2f} degrees Fahrenheit")
