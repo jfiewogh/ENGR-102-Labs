@@ -41,4 +41,4 @@ print(f"{conversion_number:.2f} liters per second is equivalent to {gallons:.2f}
 # Convert input from Celsius to Fahrenheit
 celsius_to_fahrenheit = 33.8
 fahrenheit = conversion_number * celsius_to_fahrenheit
-print(f"{conversion_number:.2f} degrees Celsius is equivalent to 33.80 degrees Fahrenheit")
+print(f"{conversion_number:.2f} degrees Celsius is equivalent to {fahrenheit:.2f} degrees Fahrenheit")
