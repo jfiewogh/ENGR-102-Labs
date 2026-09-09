@@ -62,5 +62,5 @@ y_3 = m_y * (t_3 - t_0) + y_0
 z_3 = m_z * (t_3 - t_0) + z_0
 print(f"At time {t_3:.2f} seconds the object is at ({x_3:.3f}, {y_3:.3f}, {z_3:.3f})")
 
-# Print position at time t_4
+# Print position at time t_f
 print(f"At time {t_f:.2f} seconds the object is at ({x_f:.3f}, {y_f:.3f}, {z_f:.3f})")
