@@ -8,7 +8,6 @@
 # Section: 571
 # Assignment: Lab 3
 # Date: 4 September 2026
-#
 
 # Ask the user to input the quantity to be converted
 conversion_number = float(input("Please enter the quantity to be converted: "))
