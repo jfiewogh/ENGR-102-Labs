@@ -40,16 +40,11 @@ if abs(b - f) < TOL:
     print(f"b and f are equal within tolerance of {TOL}")
 else:
     print(f"b and f are NOT equal within tolerance of {TOL}")
-# check if y and f are equal within specified tolerance
-if abs(y - f) < TOL:
-    print(f"y and f are equal within tolerance of {TOL}")
+# check if y and z are equal within specified tolerance
+if abs(y - z) < TOL:
+    print(f"y and z are equal within tolerance of {TOL}")
 else:
-    print(f"y and f are NOT equal within tolerance of {TOL}")
-    # check if z and f are equal within specified tolerance
-if abs(z - f) < TOL:
-    print(f"z and f are equal within tolerance of {TOL}")
-else:
-    print(f"z and f are NOT equal within tolerance of {TOL}")
+    print(f"y and z are NOT equal within tolerance of {TOL}")
 
 ############ Part C ############
 m = 0.1

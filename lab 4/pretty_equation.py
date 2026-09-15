@@ -6,9 +6,8 @@
 #           Zymraan Khan
 #           Leonardo Valle Gomez
 # Section: 571
-# Assignment: Lab 2
+# Assignment: Lab 4
 # Date: 15 September 2026
-#
 
 from ast import If
 from math import *
