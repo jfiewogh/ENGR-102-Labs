@@ -2,34 +2,31 @@
 # "Aggies do not lie, cheat, or steal, or tolerate those who do."
 # "I have not given or received any unauthorized aid on this assignment."
 #
-# Names:    David Chau
-#           Zymraan Khan
-#           Leonardo Valle Gomez
+# Name: Leonardo Valle Gomez
 # Section: 571
-# Assignment: Lab 4
-# Date: 10 September 2026
-
-"""
-Enter True or False for a: T
-Enter True or False for b: T
-Enter True or False for c: T
-a and b and c: True
-a or b or c: True
-XOR: False
-Odd number: True
-"""
+# Assignment: Lab 1
+# Date: 1 September 2026
+#
+from ast import If
+from math import *
 
 ############ Part A ############ 
-T = True
-t = True
-F = False
-f = False
-input("Enter True or False for a: ")
-input("Enter True or False for b: ")
-input("Enter True or False for c: ")
+a=input("Enter True or False for a: ")
+b=input("Enter True or False for b: ")
+c=input("Enter True or False for c: ")
+
+A = a == 'True' or a == 'T' or a == 't'
+B = b == 'True' or b == 'T' or b == 't'
+C = c == 'True' or c == 'T' or c == 't'
+
 
 ############ Part B ############ 
-
+d= (A) and (B) and (C)
+e= (A) or (B) or (C)
+print("a and b and c:", d)
+print("a or b or c:", e)
 ############ Part C ############ 
-
-############ Part D ############ 
+XOR= (A) != (B)
+print("XOR:", XOR)
+od= (A) and not (B) and not (C) or not (A) and (B) and not (C) or not (A) and not (B) and (C) or (A) and (B) and (C)
+print("Odd number:", od)
