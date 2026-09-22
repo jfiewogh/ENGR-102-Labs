@@ -1,1 +1,273 @@
+women, age, cholesterol
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:35 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
 sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:45 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:50 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:55 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:60 cho:105 smo:N hdl:60 sbp:100 med:N out:1
+sex:F age:65 cho:105 smo:N hdl:60 sbp:100 med:N out:1
+sex:F age:70 cho:105 smo:N hdl:60 sbp:100 med:N out:2
+sex:F age:75 cho:105 smo:N hdl:60 sbp:100 med:N out:3
+sex:F age:20 cho:170 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:170 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:50 cho:170 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:60 cho:170 smo:N hdl:60 sbp:100 med:N out:1
+sex:F age:70 cho:170 smo:N hdl:60 sbp:100 med:N out:2
+sex:F age:20 cho:220 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:220 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:50 cho:220 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:60 cho:220 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:70 cho:220 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:260 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:260 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:50 cho:260 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:60 cho:260 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:70 cho:260 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:300 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:300 smo:N hdl:60 sbp:100 med:N out:1
+sex:F age:50 cho:300 smo:N hdl:60 sbp:100 med:N out:1
+sex:F age:60 cho:300 smo:N hdl:60 sbp:100 med:N out:1
+sex:F age:70 cho:300 smo:N hdl:60 sbp:100 med:N out:2
+
+#Test Sex
+sex:O age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+#Test age
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:35 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:79 cho:105 smo:N hdl:60 sbp:100 med:N out:>30
+
+#Test Cholesteral
+
+#Test Smoking
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:O hdl:60 sbp:100 med:N out:<1
+
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:O age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+#Test hdl
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+
+#Test sbp
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:N hdl:60 sbp:-6 med:N out:<1
+#Test med
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:Y out:<1
+#Test out
+sex:F age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+
+sex:F age:85 cho:105 smo:O hdl:60 sbp:100 med:O out:>30
+sex:F age:23.3 cho:2.5 smo:N hdl:79.3 sbp:142.5 med:O out:<1
+sex:F age:24 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:25 cho:13555 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:26 cho:-2 smo:Y hdl:-1 sbp:-1 med:Y out:<1
+sex:M age:27 cho:20 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:28 cho:105 smo:N hdl:70 sbp:100 med:N out:<1
+sex:F age:20 cho:940 smo:N hdl:80 sbp:100 med:N out:<1
+sex:F age:20 cho:205 smo:Y hdl:90 sbp:100 med:N out:<1
+sex:F age:20 cho:305 smo:N hdl:100 sbp:100 med:N out:<1
+sex:F age:20 cho:405 smo:Y hdl:110 sbp:100 med:N out:<1
+sex:F age:20 cho:505 smo:N hdl:120 sbp:100 med:N out:<1
+sex:F age:20 cho:605 smo:Y hdl:130 sbp:100 med:N out:<1
+sex:F age:20 cho:705 smo:N hdl:140 sbp:100 med:N out:<1
+sex:F age:20 cho:805 smo:N hdl:150 sbp:100 med:N out:<1
+sex:F age:20 cho:1005 smo:N hdl:200 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:300 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:400 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:500 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:600 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+#Women Smoking HDL SBD and med
+sex:F age:20 cho:105 smo:N hdl:60 sbp:115 med:N out:<1
+sex:F age:20 cho:105 smo:Y hdl:50 sbp:125 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:40 sbp:135 med:N out:<1
+sex:F age:20 cho:105 smo:Y hdl:30 sbp:140 med:N out:<1
+sex:F age:20 cho:105 smo:N hdl:60 sbp:160 med:N out:<1
+
+#Men Age and Cho
+sex:M age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:35 cho:165 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:205 smo:N hdl:60 sbp:100 med:N out: 1
+sex:M age:45 cho:245 smo:N hdl:60 sbp:100 med:N out: 4
+sex:M age:50 cho:290 smo:N hdl:60 sbp:100 med:N out: 6
+sex:M age:55 cho:105 smo:N hdl:60 sbp:100 med:N out: 3
+sex:M age:60 cho:165 smo:N hdl:60 sbp:100 med:N out: 6
+sex:M age:65 cho:205 smo:N hdl:60 sbp:100 med:N out: 8
+sex:M age:70 cho:285 smo:N hdl:60 sbp:100 med:N out: 10
+sex:M age:75 cho:245 smo:N hdl:60 sbp:100 med:N out: 12
+
+sex:M age: cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age: cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+
+#Zymraan - Men smoking to end
+#Men Smoking
+sex:M age:20 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:30 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:39 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:20 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:45 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:49 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:50 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:55 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:59 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:60 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:65 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:69 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:70 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:75 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+sex:M age:79 cho:105 smo:Y hdl:60 sbp:100 med:N out:<1
+#Men not smoking
+sex:M age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:30 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:39 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:20 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:45 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:49 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:50 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:55 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:59 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:60 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:65 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:69 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:70 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:75 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:79 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+#Men HDL
+sex:M age:40 cho:105 smo:N hdl:65 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:59 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:55 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:50 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:49 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:45 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:40 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:35 sbp:100 med:N out:<1
+
+
+#Systolic BP Treated
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:Y out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+#Stystolic BP Untreated
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+
+
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
+sex:M age:40 cho:105 smo:N hdl:60 sbp:100 med:N out:<1
