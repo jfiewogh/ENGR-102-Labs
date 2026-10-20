@@ -34,9 +34,7 @@ for character in time:
         ascii_characters.append(ascii_character)
 
 # Convert list of ASCII characters to a string
-ascii_string = ""
-for i in range(len(ascii_characters[0])):
-    ascii_string += " ".join([ascii_character[i] for ascii_character in ascii_characters]) + "\n"
+ascii_string = "\n".join([" ".join([ascii_character[i] for ascii_character in ascii_characters]) for i in range(len(ascii_characters[0]))])
 
 # Output the ASCII string
 print(ascii_string)
