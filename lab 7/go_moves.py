@@ -6,7 +6,7 @@
 #           Zymraan Khan
 #           Leonardo Valle Gomez
 # Section: 571
-# Assignment: Lab 6
+# Assignment: Lab 7
 # Date: 15 October 2026
 
 begin = "\x1b[1m"
