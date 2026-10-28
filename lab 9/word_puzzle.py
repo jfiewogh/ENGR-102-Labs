@@ -31,19 +31,17 @@ def get_valid_letters(puzzle: str) -> str:
     # Convert list to string
     return "".join(valid_letters)
 
-def is_valid_guess(valid_letters, user_guess) -> bool:
-    count = 0
-    for letter in user_guess:
-        if letter in valid_letters:
-            count += 1
-    return count == 10
+def is_valid_guess(valid_letters, user_guess) :
+        letters = [] #empty list to store untique letters 
+        for letter in user_guess :
+            if letter in valid_letters and letter not in letters : # to avoid repeating letters in list
+                letters.append(letter)
+            else: 
+                return False
+        return len(letters) == 10 # checks for the unique letters only
 
-def check_user_guess(dividend: int, quotient: int, divisor: int, remainder: int) -> bool: 
-    if dividend == quotient * divisor + remainder: 
-        return True 
-    else : 
-        return False
-
+def check_user_guess(dividend, quotient, divisor, remainder) : 
+     return dividend == quotient * divisor + remainder 
         
 def make_number(word: str, guess: str) -> int:
     guess_list = list(guess)
@@ -73,23 +71,25 @@ def make_numbers(puzzle: str, guess: str) -> tuple[int]:
     return make_number(dividend, guess), make_number(quotient, guess), make_number(divisor, guess), make_number(remainder, guess)
 
 def main():
-    # The lines below demonstrate what the print_puzzle function outputs.
-    puzzle = "RUE,EAR | RUMORS,UEII  ,UKTR ,EAR ,KEOS,KAIK,USA"
-
-    # testing
-    valid_letters = get_valid_letters(puzzle)
-    print(valid_letters)
-
-    
-
-    print(make_numbers(puzzle, "TAKEOURSIM"))
-
-
-
-    print()
+    puzzle = input("Enter a word arithmetic puzzle: \n")
     print_puzzle(puzzle)
+    
+    user_guess = input("\nEnter your guess, for example ABCDEFGHIJ: ")
+
+    valid_letters = get_valid_letters(puzzle)
+
+    if not is_valid_guess(valid_letters, user_guess):
+        print("Your guess should contain exactly 10 unique letters used in the puzzle.")
+    else:
+        dividend, quotient, divisor, remainder = make_numbers(puzzle, user_guess)
+
+        if check_user_guess(dividend, quotient, divisor, remainder):
+            print("Good job!")
+        else:
+            print("Try again!")
+    # should now run through all functions 
+  
 
 if __name__ == "__main__":
     main()
 
-print(make_number("RUE", "TAKEOURSIM"))
