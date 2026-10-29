@@ -31,31 +31,29 @@ def get_valid_letters(puzzle: str) -> str:
     # Convert list to string
     return "".join(valid_letters)
 
-def is_valid_guess(valid_letters, user_guess) :
-        letters = [] #empty list to store untique letters 
-        for letter in user_guess :
-            if letter in valid_letters and letter not in letters : # to avoid repeating letters in list
-                letters.append(letter)
-            else: 
-                return False
-        return len(letters) == 10 # checks for the unique letters only
+def is_valid_guess(valid_letters: str, user_guess: str) -> bool:
+    """ Returns whether the user's guess contains exactly 10 unique valid letters """
+    # Initialize empty list to store unique valid letters in guess
+    found_valid_letters = []
+    for letter in user_guess:
+        # Add to letter to list if is a valid letter and not already in list
+        if letter in valid_letters and letter not in found_valid_letters:
+            found_valid_letters.append(letter)
+        else: 
+            return False
+    # Return whether there is exactly 10 unique valid letters in guess
+    return len(found_valid_letters) == 10
 
-def check_user_guess(dividend, quotient, divisor, remainder) : 
-     return dividend == quotient * divisor + remainder 
+def check_user_guess(dividend, quotient, divisor, remainder): 
+    """ Returns whether the dividend equals the quotient times the divisor plus the remainder"""
+    return dividend == quotient * divisor + remainder 
         
 def make_number(word: str, guess: str) -> int:
-    guess_list = list(guess)
-    dictionary_of_values_of_letters = {}
-    n = 0
-    for i in guess:
-        dictionary_of_values_of_letters[i] = n
-        n += 1
-
-    concatenation = ""
-    for i in word:
-        concatenation += str(dictionary_of_values_of_letters[i])
-    number = int(concatenation)
-    return number
+    """ Convert a word to a number using the guess as a key """
+    # Create dictionary with letter of guess string as key and the number/index as the value
+    letter_to_index = {guess[n]: n for n in range(len(guess))}
+    # Convert each letter to a number using the dictionary, join them together, then return the number
+    return int("".join(str(letter_to_index[letter]) for letter in word))
 
 def make_numbers(puzzle: str, guess: str) -> tuple[int]:
     """ Returns tuple of four values that are the equivalent integers of the words representing the dividend, quotient, divisor, and remainder """
@@ -73,23 +71,22 @@ def make_numbers(puzzle: str, guess: str) -> tuple[int]:
 def main():
     puzzle = input("Enter a word arithmetic puzzle: \n")
     print_puzzle(puzzle)
-    
+
+    # Get the guess from the user
     user_guess = input("\nEnter your guess, for example ABCDEFGHIJ: ")
 
     valid_letters = get_valid_letters(puzzle)
-
+    
+    # Check if the guess is not valid
     if not is_valid_guess(valid_letters, user_guess):
         print("Your guess should contain exactly 10 unique letters used in the puzzle.")
     else:
         dividend, quotient, divisor, remainder = make_numbers(puzzle, user_guess)
-
+        # Check if the user guess is correct
         if check_user_guess(dividend, quotient, divisor, remainder):
             print("Good job!")
         else:
             print("Try again!")
-    # should now run through all functions 
-  
 
 if __name__ == "__main__":
     main()
-
