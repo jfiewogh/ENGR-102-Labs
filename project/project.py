@@ -9,4 +9,5 @@
 # Assignment: Project
 # Date: 27 October 2026
 
-
+def rock_paper_scissors():
+    ...
