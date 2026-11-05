@@ -26,15 +26,46 @@ def is_compatible(first_truffle: dict[int, list[str]], second_truffle: dict[int,
         return False
     return True
 
-def count_feasible(count: int, num_boxes: int) -> bool:
-    """Can count truffles be spread over num_boxes boxes with 0, 2, or 3 per box?"""
-    for threes in range(num_boxes + 1):
-        rem = count - 3 * threes
-        if rem >= 0 and rem % 2 == 0:
-            twos = rem // 2
-            if twos + threes <= num_boxes: # can include 0
-                return True
-    return False 
+def counts_feasible(dark: int, white: int, num_boxes: int, white_required: bool = False) -> bool:
+    """Can dark and white truffles be spread over num_boxes boxes, jointly?
+    Dark per box is 0, 2 or 3.
+    white_required=False: white per box is 0, 2 or 3.
+    white_required=True : white per box is 2 or 3 (every box needs white)."""
+    if white_required:
+        # Only box types: (0 dark, 2 white), (0 dark, 3 white), (2 dark, 2 white)
+        if dark % 2:
+            return False
+        both = dark // 2                       # boxes with 2 dark + 2 white
+        rest = num_boxes - both                # boxes with white only: 2 or 3 each
+        if rest < 0:
+            return False
+        return 2 * rest <= white - 2 * both <= 3 * rest
+    for threes_d in range(num_boxes + 1):                              # boxes with 3 dark
+        for threes_w in range(num_boxes + 1 - threes_d):               # boxes with 3 white
+            for both in range(num_boxes + 1 - threes_d - threes_w):    # boxes with 2 dark + 2 white
+                rem_d = dark - 3 * threes_d - 2 * both
+                rem_w = white - 3 * threes_w - 2 * both
+                if rem_d < 0 or rem_w < 0 or rem_d % 2 or rem_w % 2:
+                    continue
+                if threes_d + threes_w + both + rem_d // 2 + rem_w // 2 <= num_boxes:
+                    return True
+    return False
+
+# def counts_feasible(dark: int, white: int, num_boxes: int) -> bool:
+#     """Can dark and white truffles be spread over num_boxes boxes, jointly?
+#     Each box is one of (dark, white, milk): (0,0,4) (2,0,2) (3,0,1) (0,2,2) (0,3,1) (2,2,0)."""
+#     for threes_dark in range(num_boxes + 1): # boxes with 3 dark
+#         for threes_white in range(num_boxes + 1 - threes_dark): # boxes with 3 white
+#             for both in range(num_boxes + 1 - threes_dark - threes_white): # boxes with 2 dark and 2 white
+#                 rem_dark = dark - 3 * threes_dark - 2 * both
+#                 rem_white = white - 3 * threes_white - 2 * both
+#                 if rem_dark < 0 or rem_white < 0 or rem_dark % 2 or rem_white % 2:
+#                     continue
+#                 # leftover dark go 2 per box, leftover white go 2 per box
+#                 boxes_used = threes_dark + threes_white + both + rem_dark // 2 + rem_white // 2
+#                 if boxes_used <= num_boxes:
+#                     return True
+#     return False
 
 def generate_boxes(seed_truffle: int, options: set[int], compatible: dict[int, set[int]], is_dark: dict[int, bool], is_white: dict[int, bool]):
     """Yield every valid 4-truffle box containing seed (random order)."""
@@ -51,8 +82,6 @@ def generate_boxes(seed_truffle: int, options: set[int], compatible: dict[int, s
             next_num_white = num_white + (1 if is_white[truffle] else 0)
 
             if next_num_dark > 3 or next_num_white > 3:
-                continue
-            if next_num_dark + next_num_white > len(box) + 1:
                 continue
 
             next_options = [x for x in options[i + 1:] if x in compatible[truffle]]
@@ -78,7 +107,7 @@ def attempt(remaining: set[int], num_boxes: int, compatible: dict[int, set[int]]
     min_truffle, min_count = None, None
     for truffle in remaining:
         count = len(compatible[truffle] & remaining)
-        if count == 0:
+        if count < 3:
             return None
         if min_truffle is None or count < min_count or (count == min_count and random.random() < 0.3):
             min_truffle, min_count = truffle, count
@@ -88,7 +117,7 @@ def attempt(remaining: set[int], num_boxes: int, compatible: dict[int, set[int]]
         num_dark = sum(1 for truffle in new_rem if is_dark[truffle])
         num_white = sum(1 for truffle in new_rem if is_white[truffle])
         
-        if not count_feasible(num_dark, num_boxes - 1) or not count_feasible(num_white, num_boxes - 1):
+        if not counts_feasible(num_dark, num_white, num_boxes - 1):
             continue
 
         rest = attempt(new_rem, num_boxes - 1, compatible, is_dark, is_white, state)
@@ -114,20 +143,18 @@ def make_boxes(truffles: dict[int, list[str]]) -> list[list[int]]:
 
     total_dark = sum(is_dark.values())
     total_white = sum(is_white.values())
-
-    if not count_feasible(total_dark, num_boxes) or not count_feasible(total_white, num_boxes):
-        return []
+    if not counts_feasible(total_dark, total_white, num_boxes):
+        return None
 
     remaining = set(keys)
 
-    for _ in range(15000): # random restarts
+    for _ in range(10000): # random restarts
         state = {"nodes": 0, "limit": 10000}
         result = attempt(remaining, num_boxes, compatible, is_dark, is_white, state)
         if result is not None:
             return result
 
-    print("No solution found.")
-    return []
+    return None
 
 cocoa = ["dark", "milk", "white"]
 filling = ["strawberry", "vanilla", "caramel", "coconut", "toffee"]

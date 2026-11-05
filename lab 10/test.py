@@ -74,15 +74,7 @@ def make_boxes(chocolates):
     return boxes
 
 
-boxes = make_boxes()
+boxes = make_boxes(chocolates)
 
-while boxes == None:
-    boxes = make_boxes()
-
-
-print("CHOCOLATES:")
-print(chocolates)
-
-print("\nBOXES:")
-for key, value in boxes.items():
-    print(key, value)
+# print("CHOCOLATES:")
+print(boxes)
