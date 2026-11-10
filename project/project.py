@@ -19,7 +19,7 @@ def rock_paper_scissors():
         "paper": "rock"
     }
 
-    computer_choice = choices[random.randrange(0, 2, 1)]
+    computer_choice = random.choice(choices)
 
     while True:
         user_choice = input("Enter rock, paper, or scissors: ")
