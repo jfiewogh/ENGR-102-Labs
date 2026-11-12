@@ -91,45 +91,93 @@ def rock_paper_scissors():
             elif restart_input in "Nn":
                 return
 
-def tic_tac_toe():
-    ...
-    # Create game here
+
+
+def tic_tac_toe() :
+    
+    def print_board(board) :
+        print("\n")
+        print(f"{board[0]} | {board[1]} | {board[2]}")
+        print("--+---+--")
+        print(f"{board[3]} | {board[4]} | {board[5]}")
+        print("--+---+--")
+        print(f"{board[6]} | {board[7]} | {board[8]}")
+        print("\n")
+    board = [" " for _ in range(9)] # testing the print_board function
+    # print_board(board) # testing the print_board function
+    def check_winner(board, player) : 
+        # Check rows
+        for i in range(0, 9, 3) :
+            if board[i] == board[i + 1] == board[i + 2] == player :
+                return True
+        # Check columns
+        for i in range(3) :
+            if board[i] == board[i + 3] == board[i + 6] == player :
+                return True
+        # Check diagonals
+        if board[0] == board[4] == board[8] == player :
+            return True
+        if board[2] == board[4] == board[6] == player :
+            return True
+        return False
+    def play_game() :
+        board = [" " for _ in range(9)]
+        current_player = "X"
+        moves_played = 0
+        
+        print("Welcome to Tic-Tac-Toe!")
+        
+        while True :
+            print_board(board)
+            move = (input(f"Player {current_player}, enter your move (1-9): ")) - 1
+            
+            if move == "exit":
+                    return
+           
+            # check that input is valid
+            if int(move) not in range(1,10):
+                print("Invalid input. Please enter a number between 1 and 9.")
+                continue
+
+            move = int(move) - 1  # Convert to 0-based index
+
+            # check that spot is not taken
+            if board[move] != " " :
+                print("That spot is already taken. Please try again.")
+                continue    
+
+            # Place mark and move foward
+            board[move] = current_player
+            moves_played += 1
+            
+            # Check for winner or tie
+            if check_winner(board, current_player) :
+                print_board(board)
+                print(f"Player {current_player} wins!")
+                break
+
+            if moves_played == 9 :
+                print_board(board)
+                print("It's a tie!")
+                break
+
+            # switch turns
+            current_player = "X" if current_player == "O" else "X"
+
+        # ask to play again  
+        while True:
+            restart_input = input("Would you like to try again (Y/N)? ")
+
+            if restart_input in "Yy":
+                return True
+            elif restart_input in "Nn":
+                return False
+    # Keep playing until the user decided to stop 
+    while play_game() :
+        pass
+
 
 def hangman():
-    from math import *
-letter_dictionary = {"a":"A", "b":"B", "c":"C", "d":"D", "e":"E", "f":"F", "g":"G", "h":"H", "i":"I", "j":"J", "k":"K", "l":"L", "m":"M", "n":"N","o":"O", "p":"P", "q":"Q", "r":"R", "s":"S", "t":"T", "u":"U", "v":"V", "w":"W", "x":"X", "y":"Y", "z":"Z", "A":"A", "B":"B", "C":"C", "C":"D", "E":"E", "F":"F", "G":"G", "H":"H", "I":"I", "J":"J", "K":"K", "L":"L", "M":"M", "N":"N", "O":"O", "P":"P", "Q":"Q", "R":"R", "S":"S", "T":"T", "U":"U", "V":"V", "W":"W", "X":"X", "Y":"Y", "Z":"Z", " ": " "}
-new_hidden_word = ""
-invalid = 1
-current_word = ""
-guess = ""
-while True:
-    while invalid == 1:
-        hidden_word = input("Enter the hidden word: ")
-        for letter in hidden_word:
-            if letter in letter_dictionary:
-                new_hidden_word += letter_dictionary[letter]
-                invalid = 0
-            else:
-                print("That is not a valid word. Try Again.")
-                hidden_word = ""
-                invalid = 1
-                break
-    number_of_letters = len(new_hidden_word)
-    for i in range(number_of_letters):
-        if i != " ":
-            current_word += "_"
-        else:
-            current_word += " "
-    while invalid == 0:
-        guess = input("Enter a guess for the hidden word: ")
-        if guess in letter_dictionary:
-            new_guess = letter_dictionary[guess]
-    if guess == "exit":
-        f
-#Call function to end the game 
-    if guess == "restart":
-        True
-    
     ...
     # Create game here
 
