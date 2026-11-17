@@ -8,7 +8,7 @@ guess = ""
 guesses = []
 incorrect_guesses = []
 correct_guesses = []
-number_of_incorrect_guesses = 0
+incorrect_guess_count = 0
 # Checks guess if it is a letter and in the hidden word. Adds it to the list of guesses, checks if there is a win or loss, and continues the guess loop if there still needs to be more guesses. Adds it to incorrect guesses if incorrect. 
 def check_guesses_letters(a):
     for i in hidden_word:
@@ -17,10 +17,10 @@ def check_guesses_letters(a):
             correct_guesses.append(guess)
         else:
             incorrect_guesses.append(guess)
-            number_of_incorrect_guesses += 1
+            incorrect_guess_count += 1
     if current_word == hidden_word:
         invalid = 1
-    elif number_of_incorrect_guesses == 7:
+    elif incorrect_guess_count == 7:
         invalid = 2
     print(current_word)
     print(f"Your correct guesses are {correct_guesses}, and your incorrect guesses are {incorrect_guesses}")
@@ -31,8 +31,8 @@ def check_guesses_words(a):
         invalid = 1
     else:
         incorrect_guesses.append(guess)
-        number_of_incorrect_guesses += 1
-    if number_of_incorrect_guesses == 7:
+        incorrect_guess_count += 1
+    if incorrect_guess_count == 7:
         invalid = 2
     print(current_word)
     print(f"Your correct guesses are {correct_guesses}, and your incorrect guesses are {incorrect_guesses}")
@@ -112,14 +112,14 @@ while True:
             "7" : "\ ",
             "6" : "/",}
     number_of_incorrect_guesses = 0
-    incorrect_guesses = []
+    list_incorrect_guesses = []
     max_incorrect_guesses = 7
 
     def display_hangman(number_of_incorrect_guesses, guess, word) :
 
         if guess not in word :
             number_of_incorrect_guesses += 1
-            incorrect_guesses.append(guess)
+            list_incorrect_guesses.append(guess)
             
             if number_of_incorrect_guesses == 1 :
                 print("", parts_to_hangman["1"])
@@ -151,6 +151,38 @@ while True:
 
     # print("", parts_to_hangman["1"],"\n", parts_to_hangman["2"] + parts_to_hangman["3"] + parts_to_hangman["4"],"\n", parts_to_hangman["5"], "\n", parts_to_hangman["6"], parts_to_hangman["7"]) # testing first disp;ay for hangman
 
+    def play_hangman():
+        word = input("Enter a word for Hangman: ").lower() # learned what .lower() des
+        guessed_letters = []
+        incorrect_guesses = 0
+        max_incorrect_guesses = 7
+
+        print("Welcome to Hangman!")
+        print("_ " * len(word))
+
+        while incorrect_guesses < max_incorrect_guesses:
+            guess = input("Guess a letter: ").lower()
+
+            if guess in guessed_letters:
+                print("You already guessed that letter.")
+                continue
+
+            guessed_letters.append(guess)
+
+            if guess in word:
+                print("Correct!")
+            else:
+                incorrect_guesses += 1
+                print(f"Incorrect! You have {max_incorrect_guesses - incorrect_guesses} guesses left.")
+
+            display_word = ''.join([letter if letter in guessed_letters else '_' for letter in word])
+            print(display_word)
+
+            if '_' not in display_word:
+                print("Congratulations! You've guessed the word!")
+                break
+        else:
+            print(f"Game over! The word was '{word}'.")
 
 
             
