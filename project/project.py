@@ -291,7 +291,7 @@ def hangman():
 
 def print_menu(menu_games):
     for key, value in menu_games.items():
-        print(f"{key}. {value["name"]}")
+        print(f"{key}: {value["name"]}")
 
 if __name__ == "__main__":
     menu_games = {
