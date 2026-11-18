@@ -119,13 +119,14 @@ def check_winner(board, player) :
     return False
 
 def tic_tac_toe():
+    print("Welcome to Tic-Tac-Toe!")
+
     while True:
         board = [str(i) for i in range(1, 10)]
 
         current_player = red + "X" + end
         moves_played = 0
         
-        print("Welcome to Tic-Tac-Toe!")
         print_board(board)
         
         while True:
