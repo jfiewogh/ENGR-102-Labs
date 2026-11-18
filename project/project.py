@@ -11,9 +11,11 @@
 
 import random
 from math import *
+
 red = "\033[31m"
 blue = "\033[34m"
 magenta = "\033[95m"
+bold = "\033[1m"
 end = "\033[0m"
 
 def concat_strings_by_line(first: str, second: str, sep="", first_start="", first_end="", second_start="", second_end="") -> str:
@@ -46,7 +48,10 @@ def rock_paper_scissors():
         }
     }
 
-    print("Welcome to Rock Paper Scissors!")
+    print(bold + "Welcome to Rock Paper Scissors!" + end)
+    print("You are playing against the computer.\nYour goal is to win as many rounds as possible.\nRock beats scissors, paper beats rock, and scissors beats paper.")
+    print("You can exit at any point in the game, and choose to restart after each game.")
+    print()
 
     wins, losses, ties, total = 0, 0, 0, 0
 
@@ -119,7 +124,14 @@ def check_winner(board, player) :
     return False
 
 def tic_tac_toe():
-    print("Welcome to Tic-Tac-Toe!")
+    print(bold + "Welcome to Tic-Tac-Toe!" + end)
+    print("Two players will alternate marking spaces on a 3x3 grid.")
+    print("One player is X, and the other player is O.")
+    print("X always goes first.")
+    print("After a player marks a space, it will move to the other player's turn.")
+    print("A player wins if they get three in a row horizontally, vertically, or diagonally.")
+    print("If no players get three in a row and the grid is filled, it is a tie.")
+    print("You can exit at any point in the game, and choose to restart after each game.")
 
     while True:
         board = [str(i) for i in range(1, 10)]
@@ -206,7 +218,10 @@ def get_current_word(correct_guesses: list[str], hidden_word: str) -> str:
 def hangman():
     max_incorrect = 6
 
-    print("Welcome to Hangman!")
+    print(bold + "Welcome to Hangman!" + end)
+    print("One player enters the hidden word or phrase.\nThe other player is tasked with guessing letters for the hidden word or phrase or guessing it completely.\nBe careful, incorrect guesses adds body parts to the hangman.\nOnce the hangman is completely drawn, you lose.\nYou only have 6 incorrect guesses before the hangman is drawn. \nYou do not have to go in order, but a guessed letter that is in the hidden word reveals all the places that letter is. \nIf you guess more than one letter, then it must equal the hidden word or phrase exactly unless it will be incorrect. \nNumbers or special characters cannot be used in the hidden word or phrase or in your guesses.\nSpaces are allowed in the hidden word or phrase but not in the guess.")
+    print("You can exit at any point in the game, and choose to restart after each game.")
+    print()
 
     # Game loop is a while true loop
     while True:
