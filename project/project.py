@@ -243,6 +243,7 @@ def hangman():
                 # Check if guess is valid
                 if not guess_is_valid(guess):
                     print("Guess is invalid. Try again.")
+                    continue
                 if guess in guesses:
                     print("Already guessed. Try again.")
                     continue
