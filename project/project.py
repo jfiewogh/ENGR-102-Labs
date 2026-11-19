@@ -64,7 +64,7 @@ def rock_paper_scissors():
             if user_choice in choices:
                 break
             else:
-                print(f"{user_choice} is not a valid choice")
+                print(f"\"{user_choice}\" is not a valid choice")
 
         # Get computer choice
         computer_choice = random.choice(choices)
@@ -129,6 +129,7 @@ def tic_tac_toe():
     print("One player is X, and the other player is O.")
     print("X always goes first.")
     print("After a player marks a space, it will move to the other player's turn.")
+    print("Spaces are labeled from 1 (top left) to 9 (bottom right).")
     print("A player wins if they get three in a row horizontally, vertically, or diagonally.")
     print("If no players get three in a row and the grid is filled, it is a tie.")
     print("You can exit at any point in the game, and choose to restart after each game.")
