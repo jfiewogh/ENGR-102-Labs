@@ -295,7 +295,7 @@ def hangman():
             # Check for loss
             if len(incorrect_guesses) == max_incorrect:
                 print("Game over! You've been hanged!")
-                print(hidden_word)
+                print(f"The hidden word or phrase was \"{hidden_word}\".")
                 break
 
         # Ask user if they want to try again
